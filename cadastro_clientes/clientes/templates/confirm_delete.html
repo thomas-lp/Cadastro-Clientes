@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Confirmar Exclusão</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="mb-4">Tem certeza que deseja excluir {{ cliente.nome }}?</h1>
+        <form method="POST" class="form">
+            {% csrf_token %}
+            <button type="submit" class="btn btn-danger">Sim, excluir</button>
+        </form>
+        <a href="{% url 'listar_clientes' %}" class="btn btn-secondary mt-3">Voltar</a>
+    </div>
+</body>
+</html>
