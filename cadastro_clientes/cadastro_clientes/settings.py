@@ -76,8 +76,12 @@ WSGI_APPLICATION = 'cadastro_clientes.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'cadastro-clientes-db',
+        'USER': 'postgres',
+        'PASSWORD': 'postgres',
+        'HOST': 'cadastro-clientes-db.c3am8gos2rlp.us-east-1.rds.amazonaws.com',
+        'PORT': '5432',
     }
 }
 
